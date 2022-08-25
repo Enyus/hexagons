@@ -5,15 +5,16 @@
 :root {
     --largura-hexagon: calc(0.8661 * var(--altura-hexagon));
     --altura-hexagon: 100px;
+    --background-hexagon: transparent;
 }
 
 body {
     background-color: darkgray;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: grid;
     gap: 5px;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
 }
 
 .hexagon {
-    background-color: transparent;
+    background-color: var(--background-hexagon);
     width: calc( var(--largura-hexagon) ) ; 
     height: calc( var(--altura-hexagon) / 2 ); /*Este é o valor do lado L do hexágono*/
     position: relative;
@@ -40,7 +41,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    background-color: var(--background-hexagon);
     border-left: 2px solid black;
     border-right: 2px solid black;
 }
@@ -51,4 +52,11 @@ body {
 
 .hexagon::after {
     transform: rotate(-60deg) translate(0px, -2px);
+}
+
+.container:nth-of-type(5) .hexagon,
+.container:nth-of-type(6) .hexagon,
+.container:nth-of-type(7) .hexagon,
+.container:nth-of-type(8) .hexagon {
+    --background-hexagon: aquamarine;
 }
