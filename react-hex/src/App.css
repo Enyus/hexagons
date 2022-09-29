@@ -1,0 +1,9 @@
+.hexgrid {
+  border: 1px solid blue;
+  margin: 0 40px;
+}
+
+.texto {
+  color: white;
+  font-size: 30px;
+}
