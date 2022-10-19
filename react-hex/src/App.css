@@ -1,13 +1,16 @@
 .hexgrid {
+  width: fit-content;
   border: 1px solid blue;
-  margin: 0 40px;
+  margin: 40px;
   background-color: lightgray;
+  line-height: 0; /* retira linha de 'padding' que ficava abaixo do grid */
 }
 
 /* Para colorir o texto de <Text> tem que usar a propriedade fill e não color */
 .texto {
   fill: blue;
   font-size: 7px;
+  font-family: fantasy;
 }
 
 /* para colorir o fundo de um hexágono tem que usar a propriedade fill e não background */
