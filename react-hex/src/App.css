@@ -1,9 +1,19 @@
 .hexgrid {
   border: 1px solid blue;
   margin: 0 40px;
+  background-color: lightgray;
 }
 
+/* Para colorir o texto de <Text> tem que usar a propriedade fill e não color */
 .texto {
-  color: white;
-  font-size: 30px;
+  fill: blue;
+  font-size: 7px;
+}
+
+/* para colorir o fundo de um hexágono tem que usar a propriedade fill e não background */
+/* bordas são feitas com a propriedade stroke e stroke-width ao invés de border */
+.hexagon {
+  fill: red;
+  stroke: green;
+  stroke-width: .2;
 }
